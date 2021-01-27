@@ -1,14 +1,16 @@
-package com.example.demo.controller; 
+package com.gcp.employee.controller; 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.demo.dao.EmployeeRepository;
-import com.example.demo.model.Employee;
+import com.gcp.employee.dao.EmployeeRepository;
+import com.gcp.employee.model.Employee;
 
 // Add the controller.
 @RestController
-public class HelloWorldController {
+@RequestMapping(("/gcp/employeeService"))
+public class GCPEmployeeController {
 
   @Autowired
   private EmployeeRepository employeeDao;
